@@ -1,16 +1,16 @@
 package com.Proiect_Varianta_Buna.demo.TableEntities;
 import jakarta.persistence.*;
 @Entity
-@Table(name = "Costumer")
-public class Costumer{
+@Table(name = "Customer")
+public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column( name = "costumerID" )
+    @Column( name = "customerID" )
     private int CustomerID;
 
 
-    @Column ( name = "CostumerName" )
-    private String CostumerName;
+    @Column ( name = "CustomerName" )
+    private String CustomerName;
 
 
     @Column ( unique = true , name="Email")
@@ -24,12 +24,12 @@ public class Costumer{
         CustomerID = customerID;
     }
 
-    public String getCostumerName() {
-        return CostumerName;
+    public String getCustomerName() {
+        return CustomerName;
     }
 
-    public void setCostumerName(String costumerName) {
-        CostumerName = costumerName;
+    public void setCustomerName(String customerName) {
+        CustomerName = customerName;
     }
 
     public String getEmail() {
@@ -40,12 +40,12 @@ public class Costumer{
         Email = email;
     }
 
-    public Costumer(int customerID, String costumerName, String email) {
+    public Customer(int customerID, String customerName, String email) {
         CustomerID = customerID;
-        CostumerName = costumerName;
+        CustomerName = customerName;
         Email = email;
     }
 
-    public Costumer() {
+    public Customer() {
     }
 }

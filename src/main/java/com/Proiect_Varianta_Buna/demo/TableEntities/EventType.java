@@ -16,28 +16,27 @@ public class EventType {
     @Column (unique = true, name = "EventTypeName" )
     private String EventTypeName;
 
-    public EventType(int EventTypeID, String EventTypeName) {
-        EventTypeID = EventTypeID;
-        EventTypeName = EventTypeName;
-    }
-
-    public EventType() {
-
-    }
-
     public int getEventTypeID() {
         return EventTypeID;
+    }
+
+    public void setEventTypeID(int eventTypeID) {
+        EventTypeID = eventTypeID;
     }
 
     public String getEventTypeName() {
         return EventTypeName;
     }
 
-    public void setEventTypeID(int EventTypeID) {
-        EventTypeID = EventTypeID;
+    public void setEventTypeName(String eventTypeName) {
+        EventTypeName = eventTypeName;
     }
 
-    public void setEventTypeName(String EventTypeName) {
-        EventTypeName = EventTypeName;
+    public EventType() {
+    }
+
+    public EventType(int eventTypeID, String eventTypeName) {
+        EventTypeID = eventTypeID;
+        EventTypeName = eventTypeName;
     }
 }

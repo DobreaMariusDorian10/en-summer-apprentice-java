@@ -24,6 +24,38 @@ public class Venue {
     @Column(name = "Capacity")
     private int Capacity;
 
+    public int getVenueID() {
+        return VenueID;
+    }
+
+    public void setVenueID(int venueID) {
+        VenueID = venueID;
+    }
+
+    public String getLocationName() {
+        return LocationName;
+    }
+
+    public void setLocationName(String locationName) {
+        LocationName = locationName;
+    }
+
+    public String getLocationType() {
+        return LocationType;
+    }
+
+    public void setLocationType(String locationType) {
+        LocationType = locationType;
+    }
+
+    public int getCapacity() {
+        return Capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        Capacity = capacity;
+    }
+
     public Venue(int venueID, String locationName, String locationType, int capacity) {
         VenueID = venueID;
         LocationName = locationName;
@@ -32,37 +64,5 @@ public class Venue {
     }
 
     public Venue() {
-    }
-
-    public int getVenueID() {
-        return VenueID;
-    }
-
-    public String getLocationName() {
-        return LocationName;
-    }
-
-    public String getLocationType() {
-        return LocationType;
-    }
-
-    public int getCapacity() {
-        return Capacity;
-    }
-
-    public void setVenueID(int venueID) {
-        VenueID = venueID;
-    }
-
-    public void setLocationName(String locationName) {
-        LocationName = locationName;
-    }
-
-    public void setLocationType(String locationType) {
-        LocationType = locationType;
-    }
-
-    public void setCapacity(int capacity) {
-        Capacity = capacity;
     }
 }

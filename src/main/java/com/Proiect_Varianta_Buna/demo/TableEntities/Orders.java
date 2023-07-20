@@ -16,8 +16,8 @@ public class Orders {
     private int OrderID;
 
 
-    @Column(name = "costumerID")
-    private int costumerID;
+    @Column(name = "customerID")
+    private int customerID;
 
 
     @Column(name = "ticketCategoryID")
@@ -25,73 +25,73 @@ public class Orders {
 
 
     @Column(name = "OrderedAt")
-    private String OrderedAt;
+    private Date OrderedAt;
 
 
     @Column(name = "NumberOfTickets")
-    private int NumberOfTickets;
+    private float NumberOfTickets;
 
 
     @Column(name = "totalPrice")
-    private int totalPrice;
-
-    public void setOrderID(int orderID) {
-        OrderID = orderID;
-    }
+    private float totalPrice;
 
     public int getOrderID() {
         return OrderID;
     }
 
-    public int getCostumerID() {
-        return costumerID;
+    public void setOrderID(int orderID) {
+        OrderID = orderID;
+    }
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public int getTicketCategoryID() {
         return ticketCategoryID;
     }
 
-    public String getOrderedAt() {
-        return OrderedAt;
-    }
-
-    public int getNumberOfTickets() {
-        return NumberOfTickets;
-    }
-
-    public int getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setCostumerID(int costumerID) {
-        this.costumerID = costumerID;
-    }
-
     public void setTicketCategoryID(int ticketCategoryID) {
         this.ticketCategoryID = ticketCategoryID;
     }
 
-    public void setOrderedAt(String orderedAt) {
+    public Date getOrderedAt() {
+        return OrderedAt;
+    }
+
+    public void setOrderedAt(Date orderedAt) {
         OrderedAt = orderedAt;
     }
 
-    public void setNumberOfTickets(int numberOfTickets) {
+    public float getNumberOfTickets() {
+        return NumberOfTickets;
+    }
+
+    public void setNumberOfTickets(float numberOfTickets) {
         NumberOfTickets = numberOfTickets;
     }
 
-    public void settotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public float getTotalPrice() {
+        return totalPrice;
     }
 
-    public Orders(int orderID, int costumerID, int ticketCategoryID, String orderedAt, int numberOfTickets, int totalPrice) {
-        OrderID = orderID;
-        this.costumerID = costumerID;
-        this.ticketCategoryID = ticketCategoryID;
-        OrderedAt = orderedAt;
-        NumberOfTickets = numberOfTickets;
+    public void setTotalPrice(float totalPrice) {
         this.totalPrice = totalPrice;
     }
 
     public Orders() {
+    }
+
+    public Orders(int orderID, int customerID, int ticketCategoryID, Date orderedAt, float numberOfTickets, float totalPrice) {
+        OrderID = orderID;
+        this.customerID = customerID;
+        this.ticketCategoryID = ticketCategoryID;
+        OrderedAt = orderedAt;
+        NumberOfTickets = numberOfTickets;
+        this.totalPrice = totalPrice;
     }
 }

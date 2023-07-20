@@ -22,44 +22,44 @@ public class TicketCategory {
 
 
     @Column(name = "Price")
-    private int Price;
-
-    public void setTicketCategoryID(int ticketCategoryID) {
-        TicketCategoryID = ticketCategoryID;
-    }
-
-    public void setEventID(Event eventID) {
-        this.eventID = eventID;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public void setPrice(int price) {
-        Price = price;
-    }
+    private float Price;
 
     public int getTicketCategoryID() {
         return TicketCategoryID;
+    }
+
+    public void setTicketCategoryID(int ticketCategoryID) {
+        TicketCategoryID = ticketCategoryID;
     }
 
     public Event getEventID() {
         return eventID;
     }
 
+    public void setEventID(Event eventID) {
+        this.eventID = eventID;
+    }
+
     public String getDescription() {
         return Description;
     }
 
-    public int getPrice() {
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public float getPrice() {
         return Price;
+    }
+
+    public void setPrice(float price) {
+        Price = price;
     }
 
     public TicketCategory() {
     }
 
-    public TicketCategory(int ticketCategoryID, Event eventID, String description, int price) {
+    public TicketCategory(int ticketCategoryID, Event eventID, String description, float price) {
         TicketCategoryID = ticketCategoryID;
         this.eventID = eventID;
         Description = description;

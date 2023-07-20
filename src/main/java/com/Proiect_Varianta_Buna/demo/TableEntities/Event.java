@@ -30,6 +30,62 @@ public class Event {
     @Column ( name = "EndDate" )
     private Date EndDate;
 
+    public int getEventID() {
+        return EventID;
+    }
+
+    public void setEventID(int eventID) {
+        EventID = eventID;
+    }
+
+    public Venue getVenueId() {
+        return venueId;
+    }
+
+    public void setVenueId(Venue venueId) {
+        this.venueId = venueId;
+    }
+
+    public EventType getEventTypeID() {
+        return eventTypeID;
+    }
+
+    public void setEventTypeID(EventType eventTypeID) {
+        this.eventTypeID = eventTypeID;
+    }
+
+    public String getEventDescription() {
+        return EventDescription;
+    }
+
+    public void setEventDescription(String eventDescription) {
+        EventDescription = eventDescription;
+    }
+
+    public String getEventName() {
+        return EventName;
+    }
+
+    public void setEventName(String eventName) {
+        EventName = eventName;
+    }
+
+    public Date getStartDate() {
+        return StartDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        StartDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return EndDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        EndDate = endDate;
+    }
+
     public Event(int eventID, Venue venueId, EventType eventTypeID, String eventDescription, String eventName, Date startDate, Date endDate) {
         EventID = eventID;
         this.venueId = venueId;
@@ -40,59 +96,6 @@ public class Event {
         EndDate = endDate;
     }
 
-    public int getEventID() {
-        return EventID;
-    }
-
-    public Venue getVenueId() {
-        return venueId;
-    }
-
-    public EventType getEventTypeID() {
-        return eventTypeID;
-    }
-
-    public String getEventDescription() {
-        return EventDescription;
-    }
-
-    public String getEventName() {
-        return EventName;
-    }
-
-    public Date getStartDate() {
-        return StartDate;
-    }
-
-    public Date getEndDate() {
-        return EndDate;
-    }
-
-    public void setEventID(int eventID) {
-        EventID = eventID;
-    }
-
-    public void setVenueId(Venue venueId) {
-        this.venueId = venueId;
-    }
-
-    public void setEventTypeID(EventType eventTypeID) {
-        this.eventTypeID = eventTypeID;
-    }
-
-    public void setEventDescription(String eventDescription) {
-        EventDescription = eventDescription;
-    }
-
-    public void setEventName(String eventName) {
-        EventName = eventName;
-    }
-
-    public void setStartDate(Date startDate) {
-        StartDate = startDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        EndDate = endDate;
+    public Event() {
     }
 }
