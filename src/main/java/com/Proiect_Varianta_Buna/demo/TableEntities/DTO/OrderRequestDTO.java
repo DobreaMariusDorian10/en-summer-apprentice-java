@@ -1,4 +1,4 @@
-package com.Proiect_Varianta_Buna.demo.Services.DTO;
+package com.Proiect_Varianta_Buna.demo.TableEntities.DTO;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,7 @@
 package com.Proiect_Varianta_Buna.demo.Controller;
 
-import com.Proiect_Varianta_Buna.demo.Repositories.OrdersRepository;
-import com.Proiect_Varianta_Buna.demo.Services.DTO.OrderDTO;
-import com.Proiect_Varianta_Buna.demo.Services.Implementation.OrdersService;
+import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.OrderDTO;
+import com.Proiect_Varianta_Buna.demo.Services.OrdersService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

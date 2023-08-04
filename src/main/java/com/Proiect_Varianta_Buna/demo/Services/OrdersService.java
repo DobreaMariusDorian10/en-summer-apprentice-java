@@ -1,7 +1,7 @@
-package com.Proiect_Varianta_Buna.demo.Services.Implementation;
+package com.Proiect_Varianta_Buna.demo.Services;
 
 import com.Proiect_Varianta_Buna.demo.Repositories.OrdersRepository;
-import com.Proiect_Varianta_Buna.demo.Services.DTO.OrderDTO;
+import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.OrderDTO;
 import com.Proiect_Varianta_Buna.demo.TableEntities.Orders;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

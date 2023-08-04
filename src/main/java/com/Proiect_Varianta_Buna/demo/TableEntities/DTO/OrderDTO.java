@@ -1,4 +1,4 @@
-package com.Proiect_Varianta_Buna.demo.Services.DTO;
+package com.Proiect_Varianta_Buna.demo.TableEntities.DTO;
 import java.util.Date;
 public class OrderDTO {
     Integer eventID;
