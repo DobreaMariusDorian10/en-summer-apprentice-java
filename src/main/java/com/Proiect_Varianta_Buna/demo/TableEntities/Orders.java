@@ -70,10 +70,11 @@ public class Orders implements Serializable {
     public Orders() {
     }
 
-    public Orders(int orderID, Customer customerID, TicketCategory ticketCategoryID, Date orderedAt, float numberOfTickets, float totalPrice) {
-        this.orderID = orderID;
-        customer = customerID;
-        ticketCategory = ticketCategoryID;
+
+
+    public Orders(Customer customer, TicketCategory ticketCategory, Date orderedAt, float numberOfTickets, float totalPrice) {
+        this.customer = customer;
+        this.ticketCategory = ticketCategory;
         this.orderedAt = orderedAt;
         this.numberOfTickets = numberOfTickets;
         this.totalPrice = totalPrice;

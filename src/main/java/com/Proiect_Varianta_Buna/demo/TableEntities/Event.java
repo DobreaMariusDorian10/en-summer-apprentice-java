@@ -14,7 +14,7 @@ public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column ( name = "EventID" )
-    private int eventID;
+    private Integer  eventID;
 
     @JoinColumn(name = "venueID", nullable = false)
     @ManyToOne
@@ -95,8 +95,7 @@ public class Event {
     public Event() {
     }
 
-    public Event(int eventID, Venue venueID, EventType eventTypeID, String eventDescription, String eventName, Date startDate, Date endDate) {
-        this.eventID = eventID;
+    public Event(Venue venueID, EventType eventTypeID, String eventDescription, String eventName, Date startDate, Date endDate) {
         this.venueID = venueID;
         this.eventTypeID = eventTypeID;
         this.eventDescription = eventDescription;

@@ -1,5 +1,6 @@
 package com.Proiect_Varianta_Buna.demo.Controller;
 
+import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.NewOrder;
 import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.OrderDTO;
 import com.Proiect_Varianta_Buna.demo.Services.OrdersService;
 import lombok.AllArgsConstructor;
@@ -18,5 +19,10 @@ public class OrdersController {
     public List<OrderDTO> getOrderByID(@RequestParam Integer customerID){
         return  ordersService.getOrderByCustomerID(customerID);
     }
+    @PostMapping("/placeOrder")
+    public OrderDTO postOrder(@RequestBody NewOrder newOrder){
+        return ordersService.placeOrder(newOrder);
+    }
+
 
 }

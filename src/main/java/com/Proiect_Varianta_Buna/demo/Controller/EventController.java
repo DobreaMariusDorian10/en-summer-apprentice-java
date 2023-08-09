@@ -1,6 +1,7 @@
 package com.Proiect_Varianta_Buna.demo.Controller;
 
 import com.Proiect_Varianta_Buna.demo.Services.EventService;
+import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.EventAddDTO;
 import com.Proiect_Varianta_Buna.demo.TableEntities.DTO.EventDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,10 @@ public class EventController {
         return ev;
     }
 
-//    @PostMapping("/postEvent")
-//    public EventDTO postEvent(@RequestBody EventAddDTO eventAddDTO){
-//        return eventService.postEvents(eventAddDTO);
-//    }
+    @PostMapping("/postEvent")
+    public EventDTO postEvent(@RequestBody EventAddDTO eventAddDTO){
+        return eventService.postEvents(eventAddDTO);
+    }
 //    @DeleteMapping("/deleteEvent")
 //    @ResponseStatus(code = HttpStatus.NO_CONTENT)
 //    public void deleteEvent(@RequestParam String eventName) {
