@@ -72,4 +72,34 @@ public class EventService {
         return new EventDTO(createdEvent.getEventID(), createdEvent.getVenueID(), createdEvent.getEventTypeID().getEventTypeName(), createdEvent.getEventDescription(), createdEvent.getEventName(),createdEvent.getStartDate(),createdEvent.getEndDate(), ticketCategoryDTO);
     }
 
+
+    public List<EventDTO> getEventsByEventType(String eventType) {
+        List<EventDTO> eventDTOList = new ArrayList<>();
+        List<Event> events = eventRepository.findByEventTypeID_EventTypeName(eventType);
+
+        for (Event ev : events) {
+            List<TicketCategory> ticketCategory = ticketCategoryRepository.findTicketCategoriesByEvent_EventID(ev.getEventID());
+            List<TicketCategoryDTO> ticketCategoryDTO = new ArrayList<>();
+            for (TicketCategory tk : ticketCategory) {
+                ticketCategoryDTO.add(new TicketCategoryDTO(tk.getTicketCategoryID(), tk.getDescription(), tk.getPrice()));
+            }
+            eventDTOList.add(new EventDTO(ev.getEventID(), ev.getVenueID(), ev.getEventTypeID().getEventTypeName(), ev.getEventDescription(), ev.getEventName(), ev.getStartDate(), ev.getEndDate(), ticketCategoryDTO));
+        }
+        return eventDTOList;
+    }
+    public List<EventDTO> getEventsByVenueLocation(String locationName) {
+        List<EventDTO> eventDTOList = new ArrayList<>();
+        List<Event> events = eventRepository.findByVenueID_LocationName(locationName);
+
+        for (Event ev : events) {
+            List<TicketCategory> ticketCategory = ticketCategoryRepository.findTicketCategoriesByEvent_EventID(ev.getEventID());
+            List<TicketCategoryDTO> ticketCategoryDTO = new ArrayList<>();
+            for (TicketCategory tk : ticketCategory) {
+                ticketCategoryDTO.add(new TicketCategoryDTO(tk.getTicketCategoryID(), tk.getDescription(), tk.getPrice()));
+            }
+            eventDTOList.add(new EventDTO(ev.getEventID(), ev.getVenueID(), ev.getEventTypeID().getEventTypeName(), ev.getEventDescription(), ev.getEventName(), ev.getStartDate(), ev.getEndDate(), ticketCategoryDTO));
+        }
+        return eventDTOList;
+    }
+
 }

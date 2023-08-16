@@ -3,7 +3,7 @@ import java.util.Date;
 public class OrderDTO {
     Integer eventID;
     Date orderedAt;
-    int ticketCategoryID;
+    Integer ticketCategoryID;
     float numberOfTickets;
     float totalPrice;
 
@@ -23,9 +23,10 @@ public class OrderDTO {
         this.orderedAt = orderedAt;
     }
 
-    public int getTicketCategoryID(int ticketCategoryID) {
+    public Integer getTicketCategoryID() {
         return this.ticketCategoryID;
     }
+
 
     public void setTicketCategoryID(Integer ticketCategoryID) {
         this.ticketCategoryID = ticketCategoryID;

@@ -27,13 +27,12 @@ public class EventController {
         return ev;
     }
 
-    @PostMapping("/postEvent")
-    public EventDTO postEvent(@RequestBody EventAddDTO eventAddDTO){
-        return eventService.postEvents(eventAddDTO);
+    @GetMapping("/getEventsByEventType")
+    public List<EventDTO> getEventsByEventType(@RequestParam String eventType) {
+        return eventService.getEventsByEventType(eventType);
     }
-//    @DeleteMapping("/deleteEvent")
-//    @ResponseStatus(code = HttpStatus.NO_CONTENT)
-//    public void deleteEvent(@RequestParam String eventName) {
-//        eventService.deleteEvent(eventName);
-//    }
+    @GetMapping("/getEventsByVenueLocation")
+    public List<EventDTO> getEventsByVenueLocation(@RequestParam String locationName) {
+        return eventService.getEventsByVenueLocation(locationName);
+    }
 }

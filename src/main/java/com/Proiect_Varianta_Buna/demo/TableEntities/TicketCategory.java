@@ -1,6 +1,8 @@
 package com.Proiect_Varianta_Buna.demo.TableEntities;
 import jakarta.persistence.*;
+import lombok.ToString;
 
+@ToString
 @Entity
 @Table(name="TicketCategory")
 public class TicketCategory {
