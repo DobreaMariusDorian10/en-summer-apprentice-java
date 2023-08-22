@@ -95,4 +95,16 @@ public class Orders implements Serializable {
     public void setTicketCategory(TicketCategory ticketCategory) {
         this.ticketCategory = ticketCategory;
     }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "orderID=" + orderID +
+                ", customer=" + customer +
+                ", ticketCategory=" + ticketCategory +
+                ", orderedAt=" + orderedAt +
+                ", numberOfTickets=" + numberOfTickets +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
 }

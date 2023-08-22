@@ -21,6 +21,7 @@ public class EventController {
     public EventDTO getEventByVenueIDandEventType(@RequestParam Integer venueID, @RequestParam String eventType){
         return eventService.getEventByVenueIDandEventType(venueID, eventType);
     }
+
     @GetMapping("/getAllEvents")
     public List<EventDTO> getAllEvents(){
         List<EventDTO> ev = eventService.getAllEvents();
@@ -31,6 +32,7 @@ public class EventController {
     public List<EventDTO> getEventsByEventType(@RequestParam String eventType) {
         return eventService.getEventsByEventType(eventType);
     }
+
     @GetMapping("/getEventsByVenueLocation")
     public List<EventDTO> getEventsByVenueLocation(@RequestParam String locationName) {
         return eventService.getEventsByVenueLocation(locationName);

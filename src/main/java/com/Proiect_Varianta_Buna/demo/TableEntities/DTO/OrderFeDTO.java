@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 import java.util.Date;
 
@@ -12,9 +15,11 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderFeDTO {
+    Integer orderID;
     Integer eventID;
     Date orderedAt;
     TicketCategoryDTO ticketCategoryDTO;
     float numberOfTickets;
     float totalPrice;
+
 }
